@@ -35,19 +35,19 @@
       // Fetch question from backend
       this.fetchQuestion();
   
-      // Initialize Monaco Editor
+       // Initialize Monaco Editor
       this.editor = monaco.editor.create(document.getElementById("monaco-editor"), {
-        value: "// Write your code here...\n",
+         value: "// Write your code here...\n",
         language: "javascript",
         theme: "vs-dark",
         automaticLayout: true,
       });
   
-      // Add editor change listener
-      this.editor.onDidChangeModelContent(() => {
-        this.handleCodeChange();
+       // Add editor change listener
+       this.editor.onDidChangeModelContent(() => {
+     this.handleCodeChange();
       });
-    },
+     },
     methods: {
       fetchQuestion() {
         // Replace with your backend endpoint
